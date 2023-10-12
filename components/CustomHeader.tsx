@@ -8,9 +8,11 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import BottomSheetComponent from './BottomSheetComponent';
 import SearchBarComponent from './SearchBarComponent';
 
-
+//store
 import useStore from '../store/store'
 
+//constants
+import Colors from '../constants/Colors';
 
 
 const CustomHeader = () => {
@@ -34,13 +36,13 @@ const CustomHeader = () => {
                         Delivery · Now
                     </Text>
                     <Text style={styles.textContainerSecondTitle}>
-                        Current Location <Text style={{ color: '#00CED1' }}>▼</Text>
+                        Current Location <Text style={Colors.colorIcons}>▼</Text>
                     </Text>
                 </TouchableOpacity>
 
                 <TouchableOpacity>
                     <Text style={styles.profile}>
-                        <Ionicons name="person-circle-outline" size={30} />
+                        <Ionicons style={Colors.colorIcons} name="person-circle-outline" size={30} />
                     </Text>
                 </TouchableOpacity>
 
@@ -71,7 +73,6 @@ const styles = StyleSheet.create({
         fontSize: 30,
     },
     profile: {
-        color: '#00CED1',
         borderRadius: 50
     },
     textContainer: {

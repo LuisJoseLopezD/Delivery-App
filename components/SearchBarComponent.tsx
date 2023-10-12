@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
 import { Ionicons } from '@expo/vector-icons';
 import { SearchBar } from '@rneui/themed';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet, Button } from 'react-native';
 import { TouchableOpacity } from 'react-native-gesture-handler';
+
+//constants
+import Colors from '../constants/Colors';
 
 
 const SearchBarComponent = () => {
@@ -24,7 +27,7 @@ const SearchBarComponent = () => {
                     height: 50,
                     width: 300,
                     borderWidth: 0.05,
-                    backgroundColor: '#F7F7EE',
+                    backgroundColor: "#F0F0F0",
                     borderRadius: 10
                 }}
                 inputContainerStyle={{
@@ -37,7 +40,7 @@ const SearchBarComponent = () => {
 
             <TouchableOpacity>
                 <Text style={styles.profile}>
-                    <Ionicons name="filter-outline" size={30} />
+                    <Ionicons style={Colors.colorIcons} name="filter-outline" size={30} />
                 </Text>
             </TouchableOpacity>
 
@@ -56,7 +59,6 @@ const styles = StyleSheet.create({
         paddingHorizontal: 20
     },
     profile: {
-        color: '#00CED1',
         borderRadius: 50,
     }
 })
