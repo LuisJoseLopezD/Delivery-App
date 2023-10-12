@@ -1,9 +1,22 @@
+import React, { useState } from 'react';
 import { Ionicons } from '@expo/vector-icons';
 import { View, Text, StyleSheet, Image } from 'react-native';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
+//Components
+import BottomSheetComponent from './BottomSheetComponent';
+import SearchBarComponent from './SearchBarComponent';
+
+
+import useStore from '../store/store'
+
+
+
 const CustomHeader = () => {
+
+    const isVisible = useStore((state) => state.isVisible);
+
     return (
 
         <SafeAreaView style={styles.safeArea}>
@@ -13,7 +26,10 @@ const CustomHeader = () => {
                     <Text style={styles.bike}>🚴</Text>
                 </TouchableOpacity>
 
-                <TouchableOpacity style={styles.textContainer}>
+                <TouchableOpacity
+                    onPress={() => useStore.setState({ isVisible: true })}
+                    style={styles.textContainer}
+                >
                     <Text style={styles.textContainerTitle}>
                         Delivery · Now
                     </Text>
@@ -29,6 +45,10 @@ const CustomHeader = () => {
                 </TouchableOpacity>
 
             </View>
+
+            <SearchBarComponent />
+            <BottomSheetComponent />
+
         </SafeAreaView>
 
     );
@@ -70,6 +90,10 @@ const styles = StyleSheet.create({
         color: 'black',
         fontWeight: '700',
         fontSize: 16
+    },
+    searchContainer: {
+        height: 60,
+        backgroundColor: 'white',
     }
 })
 
