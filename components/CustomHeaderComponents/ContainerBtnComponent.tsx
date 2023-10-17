@@ -3,7 +3,7 @@ import { Ionicons } from '@expo/vector-icons';
 import { StyleSheet, TouchableOpacity, Text, View } from 'react-native';
 
 //constants
-import Colors from '../constants/Colors';
+import Colors from '../../constants/Colors';
 
 interface ContainerBtnComponentTypes {
     title: string,

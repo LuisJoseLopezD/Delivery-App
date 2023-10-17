@@ -5,7 +5,7 @@ import { StyleSheet, TouchableOpacity, Text, View } from 'react-native';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 
 //store
-import useStore from '../store/store'
+import useStore from '../../store/Store';
 
 //components
 import ContainerBtnComponent from './ContainerBtnComponent';

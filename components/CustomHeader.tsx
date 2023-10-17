@@ -5,11 +5,11 @@ import { TouchableOpacity } from 'react-native-gesture-handler';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 //Components
-import BottomSheetComponent from './BottomSheetComponent';
-import SearchBarComponent from './SearchBarComponent';
+import BottomSheetComponent from './CustomHeaderComponents/BottomSheetComponent';
+import SearchBarComponent from './CustomHeaderComponents/SearchBarComponent';
 
 //store
-import useStore from '../store/store'
+import useStore from '../store/Store';
 
 //constants
 import Colors from '../constants/Colors';
@@ -17,7 +17,7 @@ import Colors from '../constants/Colors';
 
 const CustomHeader = () => {
 
-    const isVisible = useStore((state) => state.isVisible);
+    // const isVisible = useStore((state) => state.isVisible);
 
     return (
 

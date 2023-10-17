@@ -5,7 +5,8 @@ import { View, Text, StyleSheet, Button } from 'react-native';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 
 //constants
-import Colors from '../constants/Colors';
+import Colors from '../../constants/Colors';
+import { Link } from 'expo-router';
 
 
 const SearchBarComponent = () => {
@@ -38,11 +39,13 @@ const SearchBarComponent = () => {
                 value={search}
             />
 
-            <TouchableOpacity>
-                <Text style={styles.profile}>
-                    <Ionicons style={Colors.colorIcons} name="filter-outline" size={30} />
-                </Text>
-            </TouchableOpacity>
+            <Link href={'/(modal)/filter'}>
+                <TouchableOpacity>
+                    <Text style={styles.profile}>
+                        <Ionicons style={Colors.colorIcons} name="filter-outline" size={30} />
+                    </Text>
+                </TouchableOpacity>
+            </Link>
 
         </View>
 
